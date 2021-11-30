@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "826214524106",
+    "firebase_url": "https://gonippy-22263-default-rtdb.firebaseio.com",
+    "project_id": "gonippy-22263",
+    "storage_bucket": "gonippy-22263.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:826214524106:android:47738ee244bf2fde420033",
+        "android_client_info": {
+          "package_name": "com.bornalisoft.gonippy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "826214524106-jshdo9j9fj4rmuslitcts2agfftq9tkf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAfwmMiPAzRCXGoYcq-hg0NNT1uAO3Q80"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "826214524106-jshdo9j9fj4rmuslitcts2agfftq9tkf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "826214524106-g1lqodc8dipok8cdc0adrljeanf4bij1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.bornalisoft.gonippy"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
