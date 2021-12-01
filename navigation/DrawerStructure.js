@@ -8,7 +8,7 @@ const NavigationDrawerStructure = (props) => {
       props.navigationProps.toggleDrawer();
     };
   
-    return (
+    return (     
       <View style={{flexDirection: 'row'}}>
         <TouchableOpacity onPress={() => toggleDrawer()}>
           {/*Donute Button Image */}

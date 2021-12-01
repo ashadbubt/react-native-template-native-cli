@@ -1,7 +1,7 @@
 // React Navigate Drawer with Bottom Tab
 // https://aboutreact.com/bottom-tab-view-inside-navigation-drawer/
 
-import * as React from 'react';
+import React from 'react';
 import {Button, View, Text, SafeAreaView} from 'react-native';
 
 const Explore = ({navigation}) => {
@@ -30,23 +30,7 @@ const Explore = ({navigation}) => {
             onPress={() => navigation.navigate('HomeScreen')}
             title="Go to Home Screen"
           />
-        </View>
-        <Text
-          style={{
-            fontSize: 18,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          React Navigate Drawer with Bottom Tab
-        </Text>
-        <Text
-          style={{
-            fontSize: 16,
-            textAlign: 'center',
-            color: 'grey'
-          }}>
-          www.aboutreact.com
-        </Text>
+        </View>       
       </View>
     </SafeAreaView>
   );

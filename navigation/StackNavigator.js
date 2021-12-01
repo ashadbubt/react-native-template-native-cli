@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import React from 'react';
 
 import {
   getFocusedRouteNameFromRoute,
@@ -56,15 +56,16 @@ const HomeScreenStack = ({navigation}) => {
         component={BottomTabStack}
         options={({route}) => ({
           headerTitle: getHeaderTitle(route),
+          headerTitleAlign: 'center',
           headerLeft: () => (
             <NavigationDrawerStructure
               navigationProps={navigation}
             />
           ),
           headerStyle: {
-            backgroundColor: '#f4511e', //Set Header color
+            backgroundColor: 'black', //Set Header color
           },
-          headerTintColor: '#fff', //Set Header text color
+          headerTintColor: 'yellow', //Set Header text color
           headerTitleStyle: {
             fontWeight: 'bold', //Set Header text style
           },
@@ -79,9 +80,13 @@ const SettingScreenStack = ({navigation}) => {
     <Stack.Navigator
       initialRouteName="SecondPage"
       screenOptions={{
+        headerShown: false
+      }}
+      screenOptions={{
         headerLeft: () => (
           <NavigationDrawerStructure navigationProps={navigation} />
         ),
+        
         headerStyle: {
           backgroundColor: '#f4511e', //Set Header color
         },
