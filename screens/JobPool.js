@@ -4,7 +4,7 @@
 import React from 'react';
 import {Button, View, Text, SafeAreaView} from 'react-native';
 
-const Home = ({navigation}) => {
+const JobPool = ({navigation}) => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={{flex: 1, padding: 16}}>
@@ -20,7 +20,7 @@ const Home = ({navigation}) => {
               textAlign: 'center',
               marginBottom: 16,
             }}>
-            Home 
+           Job Pool
           </Text>
           <Button
             onPress={() => navigation.navigate('SettingScreenStack')}
@@ -39,4 +39,4 @@ const Home = ({navigation}) => {
   );
 };
 
-export default Home;
+export default JobPool;

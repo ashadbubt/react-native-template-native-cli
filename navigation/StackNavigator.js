@@ -1,4 +1,3 @@
-import 'react-native-gesture-handler';
 import React from 'react';
 
 import {
@@ -12,6 +11,7 @@ import SettingScreen from '../screens/Setting';
 
 import {BottomTabStack} from './TabNavigator'
 const Stack = createStackNavigator();
+const StackProfile = createStackNavigator();
 // const NavigationDrawerStructure = (props) => {
 //   //Structure for the navigatin Drawer
 //   const toggleDrawer = () => {
@@ -36,16 +36,10 @@ const Stack = createStackNavigator();
 // };
 
 const getHeaderTitle = (route) => {
-  const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
-
-  switch (routeName) {
-    case 'HomeScreen':
-      return 'Home';
-    case 'ExploreScreen':
-      return 'Explore';
-    case 'BottomTabStack':
-      return 'GELLO';
-  }
+ 
+  const routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';  
+  // console.log(routeName);
+  return routeName;
 };
 
 const HomeScreenStack = ({navigation}) => {
@@ -53,7 +47,8 @@ const HomeScreenStack = ({navigation}) => {
     <Stack.Navigator initialRouteName="HomeScreen">
       <Stack.Screen
         name="Home"
-        component={BottomTabStack}
+        component = { BottomTabStack  }  
+        initialParams={{ initialRoute: "Home" }}       
         options={({route}) => ({
           headerTitle: getHeaderTitle(route),
           headerTitleAlign: 'center',
@@ -75,10 +70,46 @@ const HomeScreenStack = ({navigation}) => {
   );
 };
 
+
+const ProfileScreenStack = ({navigation}) => {
+  return (
+    <StackProfile.Navigator initialRouteName="Profile">
+      <StackProfile.Screen
+        name="Profile"
+        component={BottomTabStack}
+        initialParams={{ initialRoute: "JobPool" }}    
+        options={({route}) => ({
+          headerTitle: getHeaderTitle(route),
+          headerTitleAlign: 'center',
+          headerLeft: () => (
+            <NavigationDrawerStructure
+              navigationProps={navigation}
+            />
+          ),
+          headerStyle: {
+            backgroundColor: 'black', //Set Header color
+          },
+          headerTintColor: 'yellow', //Set Header text color
+          headerTitleStyle: {
+            fontWeight: 'bold', //Set Header text style
+          },
+        })}
+      />
+      <StackProfile.Screen
+        name="SettingScreen2"
+        component={SettingScreen}
+        options={{
+          title: 'Setting', //Set Header Title
+        }}
+      />
+    </StackProfile.Navigator>
+  );
+};
+
 const SettingScreenStack = ({navigation}) => {
   return (
     <Stack.Navigator
-      initialRouteName="SecondPage"
+      initialRouteName="SettingScreen"
       screenOptions={{
         headerShown: false
       }}
@@ -106,4 +137,4 @@ const SettingScreenStack = ({navigation}) => {
   );
 };
 
-export {HomeScreenStack,SettingScreenStack}
+export {HomeScreenStack,SettingScreenStack,ProfileScreenStack}

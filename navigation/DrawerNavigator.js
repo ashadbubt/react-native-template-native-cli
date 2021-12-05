@@ -1,12 +1,13 @@
 // ./navigation/DrawerNavigator.js
 
 import React from "react";
-import 'react-native-gesture-handler';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import {
   HomeScreenStack,
-  SettingScreenStack
+  SettingScreenStack,
+  ProfileScreenStack  
 } from './StackNavigator'
+import UpComming from "../screens/UpComming";
 
 const Drawer = createDrawerNavigator();
 
@@ -14,16 +15,21 @@ const DrawerNavigator = () => {
   return (
     <Drawer.Navigator
       screenOptions={{
-        headerShown: false
+        headerShown: false,
+        activeTintColor: '#e91e63',
       }}
-        drawerContentOptions={{
-          activeTintColor: '#e91e63',
-        }}>
+       >
           <Drawer.Screen
-            name="Home"
+            name="Home"           
             options={{drawerLabel: 'Home'}}
-            component={HomeScreenStack}
+            component= {HomeScreenStack} 
           />
+          <Drawer.Screen
+            name="Profile"
+            options={{drawerLabel: 'Job Pool'}}
+            component={ProfileScreenStack}
+          />
+          
           <Drawer.Screen
             name="Setting"
             options={{drawerLabel: 'Setting'}}
