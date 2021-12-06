@@ -37,15 +37,15 @@ const BottomTabStack = ({ route, navigation }) => {
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({ color, size }) => (
-             <Icon name="ios-person" size={30} color="#4F8EF7" />
+             <Icon name="home-outline" size={20} color="#FFF" />
           ),
-          /*tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="home"
-              color={color}
-              size={size}
-            />
-          ),*/
+          // tabBarIcon: ({ color, size }) => (
+          //   <MaterialCommunityIcons
+          //     name="home"
+          //     color={color}
+          //     size={size}
+          //   />
+          // ),
         }}
 
       />
@@ -53,7 +53,10 @@ const BottomTabStack = ({ route, navigation }) => {
         name="JobPool"
         component={JobPool}
         options={{
-          tabBarLabel: 'JobPool',
+          tabBarLabel: 'Job Pool',
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="newspaper-outline" size={20} color="#FFF" />
+          ),
           /*tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons
               name="settings"
@@ -68,32 +71,25 @@ const BottomTabStack = ({ route, navigation }) => {
         component={UpComming}
         options={{
           tabBarLabel: 'Upcomming',
-          /*tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="settings"
-              color={color}
-              size={size}
-            />
-          ),*/
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="list" size={20} color="#FFF" />
+          ),
         }}
       />
+     
+
        <Tab.Screen
         name="Chat"
         component={Chat}
         options={{
           tabBarLabel: 'Chat',
-          /*tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons
-              name="settings"
-              color={color}
-              size={size}
-            />
-          ),*/
+          tabBarIcon: ({ color, size }) => (
+            <Icon name="chatbubble-outline" size={20} color="#FFF" />
+          ),
         }}
       />
     </Tab.Navigator>
   );
 };
 
-
-export {BottomTabStack};
+export { BottomTabStack };

@@ -46,7 +46,7 @@ const HomeScreenStack = ({navigation}) => {
   return (
     <Stack.Navigator initialRouteName="HomeScreen">
       <Stack.Screen
-        name="Home"
+        name="HomeS"
         component = { BottomTabStack  }  
         initialParams={{ initialRoute: "Home" }}       
         options={({route}) => ({

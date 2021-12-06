@@ -8,24 +8,28 @@ import {
   ProfileScreenStack  
 } from './StackNavigator'
 import UpComming from "../screens/UpComming";
-
+import CustomDrawerContent from './CustomDrawerContent';
 const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator
-      screenOptions={{
-        headerShown: false,
-        activeTintColor: '#e91e63',
-      }}
-       >
+    <Drawer.Navigator screenOptions={{
+      headerShown:false,
+      drawerStyle: {
+        backgroundColor: 'black',
+      },
+      drawerActiveTintColor:"white",
+      drawerInactiveTintColor:"white"
+    }}
+    
+     drawerContent={props =><CustomDrawerContent {...props}/> } >
           <Drawer.Screen
-            name="Home"           
+            name="HomeD"           
             options={{drawerLabel: 'Home'}}
             component= {HomeScreenStack} 
           />
           <Drawer.Screen
-            name="Profile"
+            name="ProfileD"
             options={{drawerLabel: 'Job Pool'}}
             component={ProfileScreenStack}
           />
